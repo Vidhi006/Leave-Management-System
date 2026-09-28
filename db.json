@@ -1,0 +1,105 @@
+{
+  "leaves": [
+    {
+      "id": "1",
+      "employeeId": 101,
+      "leaveType": "sick",
+      "fromDate": "2026-09-29",
+      "toDate": "2026-09-30",
+      "reason": "Medical appointment",
+      "attachment": "",
+      "status": "rejected",
+      "managerComment": "rejected",
+      "createdAt": "2026-09-28T10:30:00.000Z"
+    },
+    {
+      "id": "2",
+      "employeeId": 102,
+      "leaveType": "casual",
+      "fromDate": "2026-10-02",
+      "toDate": "2026-10-03",
+      "reason": "Personal work",
+      "attachment": "",
+      "status": "approved",
+      "managerComment": "Approved",
+      "createdAt": "2026-09-27T09:00:00.000Z"
+    },
+    {
+      "id": "3",
+      "employeeId": 103,
+      "leaveType": "sick",
+      "fromDate": "2026-10-05",
+      "toDate": "2026-10-05",
+      "reason": "Not feeling well",
+      "attachment": "",
+      "status": "rejected",
+      "managerComment": "Insufficient information",
+      "createdAt": "2026-09-27T11:00:00.000Z"
+    },
+    {
+      "employeeId": 101,
+      "leaveType": "sick",
+      "fromDate": "2026-09-28",
+      "toDate": "2026-09-29",
+      "reason": "...",
+      "attachment": "Vidhi_Resume.pdf",
+      "status": "approved",
+      "managerComment": "approved",
+      "createdAt": "2026-09-28T10:53:23.118Z",
+      "id": "5lbo4Gavkuc"
+    }
+  ],
+  "leaveBalance": [
+    {
+      "id": "1",
+      "employeeId": 101,
+      "sick": 8,
+      "casual": 8
+    },
+    {
+      "id": "2",
+      "employeeId": 102,
+      "sick": 7,
+      "casual": 6
+    },
+    {
+      "id": "3",
+      "employeeId": 103,
+      "sick": 5,
+      "casual": 10
+    }
+  ],
+  "auditLogs": [
+    {
+      "id": "1",
+      "time": "10:30 AM",
+      "message": "Employee 101 applied for Sick Leave"
+    },
+    {
+      "id": "2",
+      "time": "11:00 AM",
+      "message": "Leave Request #2 was approved"
+    },
+    {
+      "id": "3",
+      "time": "11:30 AM",
+      "message": "Leave Request #3 was rejected"
+    },
+    {
+      "time": "4:23:25 PM",
+      "message": "Employee 101 applied for Sick Leave",
+      "id": "F220WqzY7JA"
+    },
+    {
+      "time": "4:24:23 PM",
+      "message": "Leave Request #5lbo4Gavkuc was approved and leave balance updated",
+      "id": "U8JbwQ-RHuo"
+    },
+    {
+      "time": "4:24:58 PM",
+      "message": "Leave Request #1 was rejected",
+      "id": "UGrkAFSVEKA"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}

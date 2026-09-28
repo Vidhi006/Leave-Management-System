@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Leave Management System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Leave Management System</h1>
+    <p>Employee Leave Workflow</p>
+</header>
+
+<section id="leave-form-section">
+
+    <h2>Apply for Leave</h2>
+
+    <form id="leaveForm">
+
+        <div class="form-group">
+            <label for="employeeId">Employee ID</label>
+            <input
+                type="number"
+                id="employeeId"
+                name="employeeId"
+                placeholder="Enter employee ID"
+                required
+            >
+        </div>
+
+        <div class="form-group">
+            <label for="leaveType">Leave Type</label>
+
+            <select id="leaveType" name="leaveType" required>
+                <option value="">Select leave type</option>
+                <option value="sick">Sick Leave</option>
+                <option value="casual">Casual Leave</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="fromDate">From</label>
+            <input type="date" id="fromDate" name="fromDate" required>
+        </div>
+
+        <div class="form-group">
+            <label for="toDate">To</label>
+            <input type="date" id="toDate" name="toDate" required>
+        </div>
+
+        <p id="dateError" class="error-message"></p>
+
+        <div class="form-group">
+            <label for="reason">Reason</label>
+            <textarea
+                id="reason"
+                name="reason"
+                placeholder="Enter reason for leave"
+                required
+            ></textarea>
+        </div>
+
+        <div class="form-group">
+            <label for="attachment">Attachment</label>
+            <input type="file" id="attachment" name="attachment">
+        </div>
+
+        <button type="submit">Apply for Leave</button>
+
+    </form>
+
+</section>
+
+<section id="balance-section">
+
+    <h2>Leave Balance</h2>
+
+    <div class="balance-search">
+
+        <input
+            type="number"
+            id="balanceEmployeeId"
+            placeholder="Enter Employee ID"
+        >
+
+        <button id="checkBalance">
+            Check Balance
+        </button>
+
+    </div>
+
+    <div id="balanceResult"></div>
+
+</section>
+
+<section id="workflow-section">
+
+    <h2>Leave Requests</h2>
+
+    <div class="workflow-container">
+
+        <div class="leave-column">
+
+            <h3>Pending</h3>
+
+            <div id="pendingLeaves" class="leave-list"></div>
+
+        </div>
+
+        <div class="leave-column">
+
+            <h3>Approved</h3>
+
+            <div id="approvedLeaves" class="leave-list"></div>
+
+        </div>
+
+        <div class="leave-column">
+
+            <h3>Rejected</h3>
+
+            <div id="rejectedLeaves" class="leave-list"></div>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section id="audit-section">
+
+    <h2>Audit Log</h2>
+
+    <div id="auditLog"></div>
+
+</section>
+
+<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
